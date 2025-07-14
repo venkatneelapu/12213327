@@ -15,7 +15,7 @@ const UrlShortenerForm = () => {
     { longUrl: "", validity: "", shortcode: "" },
   ]);
   const [results, setResults] = useState([]);
-  const token = "<YOUR_ACCESS_TOKEN>"; // Replace with your token if needed
+  const token = "<YOUR_ACCESS_TOKEN>";
 
   const generateShortUrl = (shortcode = "") => {
     const suffix = shortcode || Math.random().toString(36).substring(2, 8);
@@ -73,7 +73,7 @@ const UrlShortenerForm = () => {
   };
 
   return (
-    <Paper elevation={4} sx={{ p: 4, mt: 4, maxWidth: "1000px", mx: "auto" }}>
+    <Paper elevation={4} sx={{ p: 4, mt: 4, maxWidth: "1000px", mx: "auto",color:"green" }}>
       <Typography variant="h5" gutterBottom>
         Frontend URL Shortener
       </Typography>
@@ -110,10 +110,10 @@ const UrlShortenerForm = () => {
         </Box>
       ))}
 
-      <Button variant="outlined" onClick={addField} sx={{ mr: 2 }}>
+      <Button variant="outlined" onClick={addField} sx={{ mr: 2 ,color:"green", borderColor:"green"}}>
         Add Another URL
       </Button>
-      <Button variant="contained" onClick={handleSubmit}>
+      <Button variant="contained" onClick={handleSubmit} sx={{ mr: 2 ,color:"white", backgroundColor:"green"}}>
         Shorten URLs
       </Button>
 
